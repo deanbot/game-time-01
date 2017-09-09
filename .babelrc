@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "react",
+    "env"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-class-properties"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types",
+        "transform-class-properties"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-class-properties"
+      ]
+    }
+  }
+}
