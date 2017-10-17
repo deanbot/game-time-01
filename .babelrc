@@ -1,15 +1,33 @@
 {
   "presets": [
     "react",
-    "env"
+    "stage-1"
   ],
   "env": {
     "development": {
+      "presets": [
+        "env",
+        "react-hmre"
+      ],
       "plugins": [
         "transform-class-properties"
       ]
     },
     "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "es2015": {
+              "modules": false
+            },
+            "targets": {
+              "ie": 9,
+              "uglify": true
+            }
+          }
+        ]
+      ],
       "plugins": [
         "transform-react-constant-elements",
         "transform-react-remove-prop-types",
@@ -17,6 +35,9 @@
       ]
     },
     "test": {
+      "presets": [
+        "env"
+      ],
       "plugins": [
         "transform-class-properties"
       ]

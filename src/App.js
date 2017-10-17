@@ -1,20 +1,23 @@
 import React from 'react';
-// import { PropTypes } from 'prop-types';
-// import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { PropTypes } from 'prop-types';
+import { Header } from './header';
 
 export class App extends React.Component {
   render() {
+    const { children } = this.props;
     return (
-      <div>
-        <nav>
-          <Link to="/dashboard">Dashboard</Link>
-        </nav>
+      <div className="app-container">
+        <Header />
+        <div className="content-container">
+          {children}
+        </div>
       </div>
     );
   }
 }
 
-App.propTypes = {};
+App.propTypes = {
+  children: PropTypes.element.isRequired
+};
 
 export default App;

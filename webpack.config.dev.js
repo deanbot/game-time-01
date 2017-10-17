@@ -14,7 +14,7 @@ export default {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json', '.scss']
   },
-  devtool: 'eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
   entry: {
     main: path.resolve(__dirname, 'src/index'),
     vendor: ['react', 'react-dom'],
@@ -108,9 +108,6 @@ export default {
       // add errors to webpack instead of warnings 
       failOnError: true
     }),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    })
+    new webpack.ProvidePlugin({})
   ]
 };

@@ -19,7 +19,6 @@ browserSync({
   ui: {
     port: 3001
   },
-  https: true,
   server: {
     baseDir: 'dist',
 

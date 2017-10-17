@@ -1,0 +1,1 @@
+export { default as DailiesPage } from './DailiesPage';
