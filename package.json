@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:deanbot/game-time.git",
   "author": "Dean Verleger <deanverleger@gmail.com>",
+  "engines": {
+    "node": ">=8.9.1"
+  },
   "license": "MIT",
   "dependencies": {
     "moment": "^2.19.1",
