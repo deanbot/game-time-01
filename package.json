@@ -6,7 +6,9 @@
   "author": "Dean Verleger <deanverleger@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.2",
     "moment": "^2.19.1",
+    "morgan": "^1.9.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -85,6 +87,10 @@
     "start": "npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "esw webpack.config.* src tools --color",
-    "lint:watch": "yarn run lint -- --watch"
+    "lint:watch": "yarn run lint -- --watch",
+    "prebuild": "yarn run clean-dist && yarn run lint",
+    "build": "babel-node tools/build.js",
+    "clean-dist": "yarn run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist"
   }
 }

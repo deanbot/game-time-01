@@ -20,3 +20,5 @@ dist
 
 # npm debug log
 npm-*.log.*
+
+ref.md
