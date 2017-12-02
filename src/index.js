@@ -7,7 +7,7 @@ import configureStore from './configureStore';
 import initialState from './initialState';
 import getRoutes from './routes';
 
-import "./styles/global.scss";
+import './styles/global.scss';
 
 const store = configureStore(initialState);
 const routes = getRoutes(store);

@@ -79,6 +79,7 @@ export const getWebpackProdConfig = (nodeEnv, outputDir) => {
     plugins: [
       new webpack.DefinePlugin(GLOBALS),
 
+      ExtractAppCss,
       ExtractVendorCss,
 
       new HtmlWebpackPlugin({
