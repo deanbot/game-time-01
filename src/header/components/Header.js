@@ -5,30 +5,30 @@ import { Link } from 'react-router';
 
 export const Header = ({ currentPath }) => { // eslint-disable-line no-unused-vars
   return (
-    <div className="masthead">
+    <header className="masthead">
       <strong>Game Time</strong>
-      <nav>
-        <Link title="Activity Log" to="/">
-          Activity Log
-        </Link>
-        |
-        <Link title="Quests" to="/quests">
-          Quests
-        </Link>
-        |
-        <Link title="Dailies" to="/dailies">
-          Dailies
-        </Link>
-        |
-        <Link title="Pitfalls" to="/pitfalls">
-          Pitfalls
-        </Link>
-        |
-        <Link title="Profile" to="/profile">
-          Profile
-        </Link>
-      </nav>
-    </div>
+
+      <div className="top-nav">
+        <nav>
+          <Link title="Quests" to="/quests">
+            Quests
+          </Link>
+          |
+          <Link title="Dailies" to="/dailies">
+            Dailies
+          </Link>
+          |
+          <Link title="Pitfalls" to="/pitfalls">
+            Pitfalls
+          </Link>
+          |
+          <Link title="Activity Log" to="/">
+            Activity Log
+          </Link>
+        </nav>
+      </div>
+
+    </header>
   );
 };
 
