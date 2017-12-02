@@ -1,5 +1,9 @@
 # game-time: YEE.
 
+# BUILD REQUIREMENTS
+
+* [yarn](https://yarnpkg.com/en/) 1.3.2+
+
 # RUNTIME REQUIREMENTS
 
 * [Node.js](https://nodejs.org/en/) 8.9.1+
