@@ -1,7 +1,7 @@
 {
   "name": "game-time",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./server/index.js",
   "repository": "git@github.com:deanbot/game-time.git",
   "author": "Dean Verleger <deanverleger@gmail.com>",
   "engines": {
@@ -55,6 +55,7 @@
     "jest": "^21.0.2",
     "jest-fetch-mock": "^1.2.1",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1",
     "opn-cli": "^3.1.0",
     "postcss-loader": "^2.0.6",
     "prop-types": "^15.6.0",
@@ -94,6 +95,8 @@
     "prebuild": "yarn run clean-dist && yarn run lint",
     "build": "babel-node tools/build.js",
     "clean-dist": "yarn run remove-dist && mkdir dist",
-    "remove-dist": "rimraf ./dist"
+    "remove-dist": "rimraf ./dist",
+    "preserve": "yarn run build",
+    "serve": "nodemon --watch ./server ./server"
   }
 }
