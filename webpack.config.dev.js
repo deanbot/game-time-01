@@ -15,12 +15,13 @@ export default {
     extensions: ['*', '.js', '.jsx', '.json', '.scss']
   },
   devtool: 'cheap-module-eval-source-map',
-  entry: {
-    main: path.resolve(__dirname, 'src/index'),
-    vendor: ['react', 'react-dom'],
-    hmw: 'webpack-hot-middleware/client?reload=true',
-    public: './src/webpack-public-path'
-  },
+  entry: [
+    './src/webpack-public-path',
+    'react',
+    'react-dom',
+    'webpack-hot-middleware/client?reload=true',
+    path.resolve(__dirname, 'src/index')
+  ],
   target: 'web',
   output: {
     path: paths.dist,

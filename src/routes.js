@@ -12,11 +12,12 @@ import { NotFoundPage } from './not-found';
 export default function getRoutes({ dispatch, getState }) { // eslint-disable-line no-unused-vars
   return (
     <Route path="/" component={App}>
-      <IndexRoute component={ActivityLogPage} />
-      <Route path="/quests" component={QuestsPage} />
+      <IndexRoute component={QuestsPage} />
+      {/* <Route path="/quests" component={QuestsPage} /> */}
       <Route path="/dailies" component={DailiesPage} />
       <Route path="/pitfalls" component={PitfallsPage} />
       <Route path="/profile" component={ProfilePage} />
+      <Route path="/activity" component={ActivityLogPage} />
       <Route path="*" component={NotFoundPage} />
     </Route>
   );

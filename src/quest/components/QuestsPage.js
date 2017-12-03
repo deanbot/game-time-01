@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types'; // eslint-disable-line no-unused-vars
 export const QuestsPage = () => {
   return (
     <div>
-      Quests
+      My Quests
     </div>
   );
 };

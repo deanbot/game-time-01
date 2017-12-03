@@ -29,7 +29,7 @@ browserSync({
         // Dev middleware can't access config, so we provide publicPath
         publicPath: config.output.publicPath,
 
-        noInfo: false,
+        noInfo: true,
         quiet: false,
         stats: {
           assets: false,
