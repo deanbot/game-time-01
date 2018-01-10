@@ -96,7 +96,7 @@
     "prestart": "yarn run start-message",
     "start": "concurrently -k -r -s first \"yarn run test:watch\" \"yarn run open:client\" \"yarn run lint:watch\"",
     "open:client": "babel-node tools/srcServer.js",
-    "open:server": "nodemon --watch ./server ./server",
+    "open:server": "nodemon -w ./server --exec \"babel-node ./server --presets env,stage-1\"",
     "lint": "esw webpack.config.* src tools --color",
     "lint:watch": "yarn run lint --watch",
     "prebuild": "yarn run clean-dist && yarn run lint && yarn run test",
