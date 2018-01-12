@@ -104,7 +104,7 @@
     "clean-dist": "yarn run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",
     "prestart": "yarn run build",
-    "start": "babel-node ./server --presets env,stage-1",
+    "start": "node ./node_modules/babel-cli/bin/babel-node.js ./server --presets env,stage-1",
     "test": "jest",
     "test:cover": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
