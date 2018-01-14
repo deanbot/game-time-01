@@ -5,7 +5,8 @@
   "repository": "git@github.com:deanbot/game-time.git",
   "author": "Dean Verleger <deanverleger@gmail.com>",
   "engines": {
-    "node": ">=8.9.1"
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1"
   },
   "license": "MIT",
   "dependencies": {
@@ -99,7 +100,7 @@
     "test": "jest",
     "build": "babel-node tools/build.js",
     "prestart": "yarn run build",
-    "start": "yarn run open:server",
+    "start": "node run open:server",
     "open:server": "nodemon -w ./server --exec \"./node_modules/babel-cli/bin/babel-node.js ./server --presets env,stage-1\"",
     "prestartclient": "babel-node tools/startMessage.js",
     "startclient": "concurrently -k -r -s first \"yarn run test:watch\" \"yarn run open:client\" \"yarn run lint:watch\"",
