@@ -99,13 +99,26 @@ call :SelectNodeVersion
 
 call !NPM_CMD! config set scripts-prepend-node-path true
 
-:: 3. Install npm packages
+:: 3. Install Yarn
+echo Verifying Yarn Install.
+call :ExecuteCmd !NPM_CMD! install yarn -g
+
+:: 4. Install Yarn packages
+echo Installing Yarn Packages.
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd !NPM_CMD! install --production
+  call :ExecuteCmd yarn install --production
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
+
+:: 3. Install npm packages
+::IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
+::  pushd "%DEPLOYMENT_TARGET%"
+::  call :ExecuteCmd !NPM_CMD! install --production
+::  IF !ERRORLEVEL! NEQ 0 goto error
+::  popd
+::)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 goto end
