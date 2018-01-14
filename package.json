@@ -100,7 +100,7 @@
     "build": "babel-node tools/build.js",
     "prestart": "yarn run build",
     "start": "yarn run open:server",
-    "open:server": "nodemon -w ./server --exec \"babel-node ./server --presets env,stage-1\"",
+    "open:server": "nodemon -w ./server --exec \"./node_modules/babel-cli/bin/babel-node.js ./server --presets env,stage-1\"",
     "prestartclient": "babel-node tools/startMessage.js",
     "startclient": "concurrently -k -r -s first \"yarn run test:watch\" \"yarn run open:client\" \"yarn run lint:watch\"",
     "test:watch": "yarn run test --watch",
