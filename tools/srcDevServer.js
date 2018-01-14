@@ -30,7 +30,7 @@ browserSync({
         publicPath: config.output.publicPath,
 
         noInfo: true,
-        quiet: false,
+        quiet: true,
         stats: {
           assets: false,
           colors: true,

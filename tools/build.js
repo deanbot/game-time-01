@@ -37,7 +37,7 @@ webpack(config).run((error, stats) => {
     jsonStats.warnings.map(warning => console.log(chalkWarning(warning)));
   }
 
-  console.log(`Webpack stats: ${stats}`);
+  // console.log(`Webpack stats: ${stats}`);
 
   // if we got this far, the build succeeded.
   console.log(

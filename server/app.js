@@ -5,7 +5,7 @@ import path from 'path';
 import initializeDb from './db';
 import middleware from './middleware';
 import api from './api';
-import config from './config.json';
+import config from './config';
 
 const app = express();
 

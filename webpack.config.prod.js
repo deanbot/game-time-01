@@ -96,7 +96,7 @@ export const getWebpackProdConfig = (nodeEnv, outputDir) => {
 
       new webpack.LoaderOptionsPlugin({
         minimize: false,
-        debug: true,
+        debug: false,
         noInfo: true, // set to false to see a list of every file being bundled.
         options: {
           sassLoader: {
